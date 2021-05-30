@@ -36,6 +36,7 @@ Plug 'nvim-treesitter/playground'
 
 " Debugger Plugins
 Plug 'puremourning/vimspector'
+Plug 'mfussenegger/nvim-dap'
 Plug 'szw/vim-maximizer'
 
 Plug 'wakatime/vim-wakatime'
@@ -77,6 +78,7 @@ Plug 'tmsvg/pear-tree'
 Plug 'vimsence/vimsence'
 Plug 'famiu/nvim-reload'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 " Plug 'ThePrimeagen/harpoon'
 
 "

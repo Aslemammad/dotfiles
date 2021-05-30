@@ -22,7 +22,7 @@ nnoremap tl  :tablast<CR>
 nnoremap tt  :tabedit<CR>
 nnoremap tn  :tabnew<CR>
 nnoremap td  :tabclose<CR>
-
+tnoremap <silent> <C-Esc> <C-\><C-n>
 
 let g:the_primeagen_qf_l = 0
 let g:the_primeagen_qf_g = 0
