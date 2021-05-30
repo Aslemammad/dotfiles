@@ -28,3 +28,4 @@ set scrolloff=8
 set noshowmode
 set clipboard=unnamedplus
 set lazyredraw
+set inccommand=nosplit

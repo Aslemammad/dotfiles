@@ -78,6 +78,7 @@ Plug 'tmsvg/pear-tree'
 Plug 'vimsence/vimsence'
 Plug 'famiu/nvim-reload'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'vim-scripts/YankRing.vim'
 
 " Plug 'ThePrimeagen/harpoon'
 
@@ -133,17 +134,15 @@ endfunction
 nnoremap <leader>n :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>
 " Start NERDTree and leave the cursor in it.
 " autocmd VimEnter * NERDTree
 " Mirror the NERDTree before showing it. This makes it the same on all tabs.
-nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
-
+nnoremap <C-f> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 
 
 let loaded_matchparen = 1
 " let mapleader = " "
-nnoremap <silent> <C-f> :lua require("harpoon.term").sendCommand(1, ""); require("harpoon.term").gotoTerminal(1)<CR>
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>bs /<C-R>=escape(expand("<cWORD>"), "/")<CR><CR>
 nnoremap <leader>u :UndotreeShow<CR>

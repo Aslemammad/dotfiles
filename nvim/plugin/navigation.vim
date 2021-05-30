@@ -9,6 +9,8 @@ nnoremap <leader>j :lprev<CR>zz
 nnoremap <C-q> :call ToggleQFList(1)<CR>
 nnoremap <leader>q :call ToggleQFList(0)<CR>
 
+" nnoremap <leader>u :UndotreeToggle<CR>
+
 unmap <C-k>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
@@ -22,7 +24,6 @@ nnoremap tl  :tablast<CR>
 nnoremap tt  :tabedit<CR>
 nnoremap tn  :tabnew<CR>
 nnoremap td  :tabclose<CR>
-tnoremap <silent> <C-Esc> <C-\><C-n>
 
 let g:the_primeagen_qf_l = 0
 let g:the_primeagen_qf_g = 0
