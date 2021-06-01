@@ -65,10 +65,11 @@ hide_edge_borders none
 
 #Gaps
 # smart_gaps on 
-gaps inner 8
-gaps outer 5
-gaps top 5
-#bindsym $mod+Shift+g gaps inner current toggle 0 
+gaps inner 15
+# gaps outer 5
+# gaps top 5
+bindsym $mod+Shift+g gaps inner current toggle 0 
+bindsym $mod+g gaps inner current toggle 15 
 
 #Workspace Name
 
@@ -264,12 +265,9 @@ exec_always --no-startup-id setxkbmap -model pc104 -layout us,ir -option grp:ctr
 exec_always --no-startup-id setxkbmap -option caps:escape
 
 #setxkbmap -option caps:escape
-#Telegram
-exec_always --no-startup-id killall -q telegram-desktop 
-exec_always --no-startup-id sleep 1 && telegram-desktop -startintray
 #mailspring
-exec_always --no-startup-id killall -q mailspring 
-exec_always --no-startup-id sleep 1 && mailspring -b
+# exec_always --no-startup-id killall -q mailspring
+# exec_always --no-startup-id sleep 1 && mailspring -b
 
 exec_always --no-startup-id rescuetime
 exec_always --no-startup-id flameshot 
@@ -300,8 +298,12 @@ exec_always --no-startup-id sleep 1 && variety
 #
 #conky
 #exec --no-startup-id conky
+exec_always --no-startup-id killall -q rofi
+exec_always --no-startup-id sleep 1 && rofi
 
 
+exec_always --no-startup-id killall -q *mw-sync*
+exec_always --no-startup-id sleep 1 && ~/.config/mw-sync.sh
 # Plasma compatibility improvements
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
