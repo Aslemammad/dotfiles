@@ -11,6 +11,7 @@
   - Vimscene (Discord integration)
   - YankRing (Yank history manager)
   - Undotree
+
   Foked from awesome-streamers/awesome-streamerrc (By theprimeagen) nvim config
 - I3 (Window manager)
   - Vi mode support 
@@ -24,4 +25,9 @@
   - Oh my zsh support
   - Minimal theme
   - Vi mode support
-  
+- Alacritty 
+  - Full Ubuntu mono font support
+  - Byobu support
+- Picom 
+  - Transparency
+  - Blur
