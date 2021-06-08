@@ -29,3 +29,6 @@ set noshowmode
 set clipboard=unnamedplus
 set lazyredraw
 set inccommand=nosplit
+set timeoutlen=500
+set ttimeoutlen=0
+

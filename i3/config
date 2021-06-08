@@ -70,6 +70,7 @@ gaps inner 15
 # gaps top 5
 bindsym $mod+Shift+g gaps inner current toggle 0 
 bindsym $mod+g gaps inner current toggle 15 
+bindsym $mod+q exec killall -q polybar
 
 #Workspace Name
 
@@ -269,7 +270,11 @@ exec_always --no-startup-id setxkbmap -option caps:escape
 # exec_always --no-startup-id killall -q mailspring
 # exec_always --no-startup-id sleep 1 && mailspring -b
 
+exec_always --no-startup-id killall -q *tutanota*
+exec_always --no-startup-id sleep 1 && ~/Applications/tutanota-desktop-linux_b782f288e49596c14f99e7bc50f0eb3f.AppImage 
+
 exec_always --no-startup-id rescuetime
+exec_always --no-startup-id killall -q flameshot
 exec_always --no-startup-id flameshot 
 
 #xrandr
@@ -301,6 +306,7 @@ exec_always --no-startup-id sleep 1 && variety
 exec_always --no-startup-id killall -q rofi
 exec_always --no-startup-id sleep 1 && rofi
 
+exec_always --no-startup-id python3 /home/bagher/.config/i3/i3-swallow.py
 
 exec_always --no-startup-id killall -q *mw-sync*
 exec_always --no-startup-id sleep 1 && ~/.config/mw-sync.sh
@@ -322,3 +328,4 @@ for_window [class="(?i)*nextcloud*"] floating disable
 for_window [class="plasmashell" window_type="notification"] border none, move right 700px, move down 450px
 no_focus [class="plasmashell" window_type="notification"]
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
+

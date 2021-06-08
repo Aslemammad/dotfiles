@@ -36,6 +36,7 @@ Plug 'nvim-treesitter/playground'
 
 " Debugger Plugins
 Plug 'puremourning/vimspector'
+Plug 'vim-test/vim-test'
 Plug 'mfussenegger/nvim-dap'
 Plug 'szw/vim-maximizer'
 
@@ -78,7 +79,11 @@ Plug 'tmsvg/pear-tree'
 Plug 'vimsence/vimsence'
 Plug 'famiu/nvim-reload'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'vim-scripts/YankRing.vim'
+Plug 'bfredl/nvim-miniyank'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'sudormrfbin/cheatsheet.nvim'
+
+Plug 'whonore/Coqtail'
 
 " Plug 'ThePrimeagen/harpoon'
 
@@ -131,7 +136,7 @@ endfunction
 
 
 
-nnoremap <leader>n :NERDTreeFocus<CR>
+" nnoremap <leader>n :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 " nnoremap <C-f> :NERDTreeFind<CR>

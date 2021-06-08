@@ -19,7 +19,8 @@ nnoremap gsh :Lspsaga signature_help<CR>
 " nnoremap gr :lua vim.lsp.buf.references()<CR>
 nnoremap gr :Lspsaga lsp_finder<CR>
 " nnoremap <leader>rn :lua vim.lsp.buf.rename()<CR>
-nnoremap gR :Lspsaga rename<CR>
+nnoremap gR :lua vim.lsp.buf.rename()<CR>
+" nnoremap gR :Lspsaga rename<CR>
 " nnoremap gh :lua vim.lsp.buf.hover()<CR>
 nnoremap gh :Lspsaga hover_doc<CR>
 " nnoremap <leader>a :lua vim.lsp.buf.code_action()<CR>
@@ -101,5 +102,9 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
+let g:vimsence_small_text = '(Neo)Vim'
+let g:vimsence_small_image = 'neovim'
+let g:vimsence_file_explorer_text = 'In NERDTree'
+let g:vimsence_file_explorer_details = 'Looking for files'
 
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
