@@ -173,6 +173,7 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:/home/bagher/development/flutter/bin"
 export PATH="$PATH:/opt/android-studio/bin"
 alias studio='proxychains studio.sh'
+alias python='python3'
 export GTK_CSD=0
 export LD_PRELOAD="/usr/lib/libgtk3-nocsd.so.0:${LD_PRELOAD}"
 export PATH="$PATH:/home/bagher/vectr"
@@ -180,7 +181,10 @@ export PATH="/home/bagher/dart-sass/dart-sass:$PATH"
 export PATH="$HOME/.npm/bin:$PATH"
 export N_PREFIX="$HOME/.n"
 alias svelte='npx degit sveltejs/template'
+alias note='cd ~/notes && nvim .'
+alias vim='nvim'
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
+export PATH="/home/bagher/tools/depot_tools:$PATH"
 
 xset r rate 250 200
 export NVM_DIR="/home/bagher/.nvm"
@@ -188,6 +192,7 @@ export NVM_DIR="/home/bagher/.nvm"
 
 export PATH="$HOME/SoundWireServer:$PATH"
 # eval "$(starship init zsh)"
+# shutdown -P 00:06 &> /dev/null
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -198,3 +203,5 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 
 source /home/bagher/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# source /home/bagher/.config/broot/launcher/bash/br

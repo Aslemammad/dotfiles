@@ -31,4 +31,4 @@ set lazyredraw
 set inccommand=nosplit
 set timeoutlen=500
 set ttimeoutlen=0
-
+set cursorline

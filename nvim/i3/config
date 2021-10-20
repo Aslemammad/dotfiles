@@ -262,8 +262,7 @@ exec_always --no-startup-id killall -q polybar
 exec_always --no-startup-id sleep 1 && polybar -q bottom -c  ~/.config/polybar/material/preview.ini 
 exec_always --no-startup-id sleep 1 && polybar -q top -c  ~/.config/polybar/material/preview.ini 
 # exec_always --no-startup-id setxkbmap -model pc104 -layout us,ir -option grp:alt_shift_toggle
-exec_always --no-startup-id setxkbmap -model pc104 -layout us,ir -option grp:ctrl_alt_toggle
-exec_always --no-startup-id setxkbmap -option caps:escape
+
 
 #setxkbmap -option caps:escape
 #mailspring
@@ -295,6 +294,7 @@ exec_always --no-startup-id dunst
 exec_always --no-startup-id killall -q xmoji
 exec_always --no-startup-id sleep 1 && xmoji
 exec_always --no-startup-id xmodmap ~/.speedswapper
+exec_always --no-startup-id shutdown --no-wall -P 00:06
 #openrazer
 #exec_always --no-startup-id 'echo -n -e "\x20\x02\x00" > $(find -L /sys/bus/hid/drivers/razerkbd/0003:1532* -maxdepth 1 -name "matrix_effect_static")'
 
@@ -306,10 +306,12 @@ exec_always --no-startup-id sleep 1 && variety
 exec_always --no-startup-id killall -q rofi
 exec_always --no-startup-id sleep 1 && rofi
 
-exec_always --no-startup-id python3 /home/bagher/.config/i3/i3-swallow.py
+# exec_always --no-startup-id killall -q keynav
+# exec_always --no-startup-id sleep 1 && keynav
 
-exec_always --no-startup-id killall -q *mw-sync*
-exec_always --no-startup-id sleep 1 && ~/.config/mw-sync.sh
+# exec_always --no-startup-id python3 /home/bagher/.config/i3/i3-swallow.py
+exec --no-startup-id mongod 
+#
 # Plasma compatibility improvements
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -329,3 +331,8 @@ for_window [class="plasmashell" window_type="notification"] border none, move ri
 no_focus [class="plasmashell" window_type="notification"]
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
+
+
+# exec_always --no-startup-id setxkbmap -model pc104 -layout us,ir -option grp:ctrl_alt_toggle
+# exec_always --no-startup-id setxkbmap -option caps:escape
+# exec --no-startup-id ~/bin/catch_window_change.sh

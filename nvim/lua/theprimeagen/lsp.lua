@@ -173,8 +173,8 @@ local function setup_servers()
 
     require'lspconfig'[server].setup(config)
   end
-  require'lspconfig'.flow.setup{}
-  require'lspconfig'.bashls.setup{}
+  -- require'lspconfig'.flow.setup{}
+  -- require'lspconfig'.bashls.setup{}
   require'lspconfig'.leanls.setup{}
 end
 

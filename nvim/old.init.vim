@@ -88,6 +88,7 @@ Plug 'ThePrimeagen/git-worktree.nvim'
 
 
 call plug#end()
+let g:gruvbox_contrast_dark = 'hard'
 
 syntax enable
 " set termguicolors 

@@ -9,28 +9,30 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 "
 
 " nnoremap gd :lua vim.lsp.buf.definition()<CR>
-nnoremap gd :Lspsaga preview_definition<CR>
+" nnoremap gd :Lspsaga preview_definition<CR>
+nnoremap gd :lua vim.lsp.buf.declaration()<CR>
 " nnoremap gD :lua vim.lsp.buf.declaration()<CR>
 nnoremap gD :lua vim.lsp.buf.definition()<CR>
-" nnoremap gi :lua vim.lsp.buf.implementation()<CR>
-nnoremap gi :Lspsaga implement<CR>
-" nnoremap gsh :lua vim.lsp.buf.signature_help()<CR>
-nnoremap gsh :Lspsaga signature_help<CR>
-" nnoremap gr :lua vim.lsp.buf.references()<CR>
-nnoremap gr :Lspsaga lsp_finder<CR>
+nnoremap gi :lua vim.lsp.buf.implementation()<CR>
+" nnoremap gi :Lspsaga implement<CR>
+nnoremap gsh :lua vim.lsp.buf.signature_help()<CR>
+" nnoremap gsh :Lspsaga signature_help<CR>
+nnoremap gr :lua vim.lsp.buf.references()<CR>
+" nnoremap gr :Lspsaga lsp_finder<CR>
 " nnoremap <leader>rn :lua vim.lsp.buf.rename()<CR>
 nnoremap gR :lua vim.lsp.buf.rename()<CR>
 " nnoremap gR :Lspsaga rename<CR>
-" nnoremap gh :lua vim.lsp.buf.hover()<CR>
-nnoremap gh :Lspsaga hover_doc<CR>
-" nnoremap <leader>a :lua vim.lsp.buf.code_action()<CR>
-nnoremap <leader>a :Lspsaga code_action<CR>
-" nnoremap <space>e :lua vim.lsp.util.show_line_diagnostics()<CR>
-nnoremap <space>e :Lspsaga show_line_diagnostics<CR>
-" nnoremap ]d :lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap ]d :Lspsaga diagnostic_jump_next<CR>
-" nnoremap [d :lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap [d :Lspsaga diagnostic_jump_prev<CR>
+nnoremap gh :lua vim.lsp.buf.hover()<CR>
+" nnoremap gh :Lspsaga hover_doc<CR>
+nnoremap <leader>a :lua vim.lsp.buf.code_action()<CR>
+" nnoremap <leader>a :Lspsaga code_action<CR>
+" vim.lsp.diagnostic.show_line_diagnostics()
+nnoremap <space>e :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+" nnoremap <space>e :Lspsaga show_line_diagnostics<CR>
+nnoremap ]d :lua vim.lsp.diagnostic.goto_next()<CR>
+" nnoremap ]d :Lspsaga diagnostic_jump_next<CR>
+nnoremap [d :lua vim.lsp.diagnostic.goto_prev()<CR>
+" nnoremap [d :Lspsaga diagnostic_jump_prev<CR>
 " nnoremap <space>q :call LspLocationList()<CR>
 
 " augroup THE_PRIMEAGEN_LSP
@@ -42,6 +44,7 @@ augroup fmt
   autocmd!
   " autocmd BufWritePre * undojoin | Neoformat
   autocmd BufWritePre *.go,*.rs,*.cpp,*.c,*.lua,*.sh,*.vim,*.py undojoin | Neoformat
+
 augroup END
 
 
@@ -70,8 +73,9 @@ let g:compe.source.vsnip = v:true
 
 let g:neoformat_try_formatprg = 1
 let g:prettier#autoformat_require_pragma = 0
-let g:prettier#autoformat = 1
+let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
+let g:prettier#quickfix_enabled = 0
 let g:yankring_clipboard_monitor=0
 " commenting
 "
@@ -108,3 +112,5 @@ let g:vimsence_file_explorer_text = 'In NERDTree'
 let g:vimsence_file_explorer_details = 'Looking for files'
 
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+
+" nnoremap <silent><c-[> :<c-u>exe v:count1 . "ToggleTerm"<CR>
